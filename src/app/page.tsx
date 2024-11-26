@@ -138,7 +138,18 @@ export default function LandingPage() {
           className="object-cover opacity-60"
           priority
         />
-        <div className="relative z-10 container mx-auto px-4 text-center">
+        <div className="relative z-10 container mx-auto px-4 text-center flex flex-col items-center gap-4">
+          <div className="sm:w-3/4 md:w-1/2 aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/GeeKXMaHztc?si=Pa1T9VHYnHLjf7Ke"
+              className="w-full h-full"
+              title="Otherlights Trailer"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
+
           <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
             An Action/RPG Roguelite designed
             <br /> for 1 to 4 players in local co-op.
