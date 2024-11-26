@@ -166,11 +166,17 @@ export default function LandingPage() {
       </section>
 
       {/* Explore Section */}
-      <section
-        id="explore"
-        className="py-20 bg-gradient-to-b from-black to-gray-900"
-      >
-        <div className="container mx-auto px-4">
+      <section id="explore" className="relative py-20">
+        <Image
+          src="/Arbre_Temps.webp"
+          alt="Mystical Time Tree"
+          fill
+          className="object-cover opacity-60 z-10"
+          priority
+        />
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-20"></div>
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
+        <div className="container mx-auto px-4 relative z-30">
           <h2 className="text-4xl font-bold text-center mb-16 text-yellow-400">
             Explore a Mystical World
           </h2>
@@ -193,8 +199,17 @@ export default function LandingPage() {
       </section>
 
       {/* Characters Section */}
-      <section id="characters" className="py-20 bg-gray-900">
-        <div className="container mx-auto px-4">
+      <section id="characters" className="relative py-20">
+        <Image
+          src="/village.webp"
+          alt="Village Scene"
+          fill
+          className="object-cover opacity-60 z-10"
+          priority
+        />
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-20"></div>
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
+        <div className="ccontainer mx-auto px-4 relative z-30">
           <h2 className="text-4xl font-bold text-center mb-16 text-yellow-400">
             Meet the Characters
           </h2>
@@ -206,6 +221,7 @@ export default function LandingPage() {
               height={400}
               className="rounded-lg shadow-2xl order-2 md:order-1"
             />
+
             <div className="space-y-6 order-1 md:order-2">
               <p className="text-xl">
                 Unlock characters and progress in the roguelite quest completed
@@ -218,11 +234,17 @@ export default function LandingPage() {
       </section>
 
       {/* Destinies Section */}
-      <section
-        id="destinies"
-        className="py-20 bg-gradient-to-b from-gray-900 to-black"
-      >
-        <div className="container mx-auto px-4">
+      <section id="destinies" className="relative py-20">
+        <Image
+          src="/planche_destinees.webp"
+          alt="Character Destinies"
+          fill
+          className="object-cover opacity-60 z-10"
+          priority
+        />
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-20"></div>
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
+        <div className="container mx-auto px-4 relative z-30">
           <h2 className="text-4xl font-bold text-center mb-16 text-yellow-400">
             Choose Your Destiny
           </h2>
@@ -245,8 +267,17 @@ export default function LandingPage() {
       </section>
 
       {/* Build Section */}
-      <section id="build" className="py-20 bg-black">
-        <div className="container mx-auto px-4">
+      <section id="build" className="relative py-20">
+        <Image
+          src="/Screenshot_Loot.webp"
+          alt="Character Building"
+          fill
+          className="object-cover opacity-40 z-10"
+          priority
+        />
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-20"></div>
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
+        <div className="container mx-auto px-4 relative z-30">
           <h2 className="text-4xl font-bold text-center mb-16 text-yellow-400">
             Craft Your Legend
           </h2>
@@ -269,11 +300,17 @@ export default function LandingPage() {
       </section>
 
       {/* World Section */}
-      <section
-        id="world"
-        className="py-20 bg-gradient-to-b from-black to-gray-900"
-      >
-        <div className="container mx-auto px-4">
+      <section id="world" className="py-20 relative">
+        <Image
+          src="/UI-Carte.webp"
+          alt="World Map"
+          fill
+          className="object-cover opacity-40 z-10"
+          priority
+        />
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-20"></div>
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
+        <div className="container mx-auto px-4 relative z-30">
           <h2 className="text-4xl font-bold text-center mb-16 text-yellow-400">
             Find Your Way
           </h2>
@@ -296,7 +333,7 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-gray-900" id="find-us">
+      <footer className="py-12 bg-gblack" id="find-us">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-center mb-16 text-yellow-400">
             Find us
@@ -304,49 +341,49 @@ export default function LandingPage() {
           <div className="flex justify-center flex-wrap gap-4 mb-8">
             <Link
               href="https://www.instagram.com/otherlights_official/"
-              className="p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
+              className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
             >
               <FaInstagram className="w-6 h-6" />
             </Link>
             <Link
               href="https://www.facebook.com/profile.php?id=61568828963619"
-              className="p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
+              className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
             >
               <FaFacebook className="w-6 h-6" />
             </Link>
             <Link
               href="https://x.com/SolArtificiel"
-              className="p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
+              className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
             >
               <FaTwitter className="w-6 h-6" />
             </Link>
             <Link
               href="https://www.tiktok.com/@otherlights_game"
-              className="p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
+              className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
             >
               <FaTiktok className="w-6 h-6" />
             </Link>
             <Link
               href="https://www.youtube.com/@Otherlights"
-              className="p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
+              className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
             >
               <FaYoutube className="w-6 h-6" />
             </Link>
             <Link
               href="https://www.linkedin.com/company/soleil-artificiel/"
-              className="p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
+              className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
             >
               <FaLinkedin className="w-6 h-6" />
             </Link>
             <Link
               href="https://discord.gg/4kstZMUrAt"
-              className="p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
+              className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
             >
               <FaDiscord className="w-6 h-6" />
