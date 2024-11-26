@@ -58,15 +58,19 @@ export default function LandingPage() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90 shadow-md">
         <div className=" px-4 w-full">
           <div className="w-full flex justify-between items-center py-4">
-            <Link href="/" className="text-2xl font-bold text-yellow-400 pl-4">
+            <Link
+              href="/"
+              className="text-2xl font-bold text-yellow-400 pl-4 flex items-center"
+            >
               <Image
                 src="/library_logo_transparent.webp"
                 alt="Otherlights Hero"
                 width={100}
                 height={100}
-                className="object-cover opacity-60"
+                className="object-cover"
                 priority
               />
+              <h1 className=" text-yellow-400 ">Otherlights</h1>
             </Link>
             <nav className="hidden md:flex space-x-6 pr-4">
               {[
@@ -135,9 +139,6 @@ export default function LandingPage() {
           priority
         />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-yellow-400">
-            OTHERLIGHTS
-          </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
             An Action/RPG Roguelite designed
             <br /> for 1 to 4 players in local co-op.
