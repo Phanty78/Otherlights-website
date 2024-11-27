@@ -17,6 +17,7 @@ import { HiMenu, HiX } from 'react-icons/hi'
 export default function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -139,17 +140,6 @@ export default function LandingPage() {
           priority
         />
         <div className="relative z-10 container mx-auto px-4 text-center flex flex-col items-center gap-4">
-          <div className="sm:w-3/4 md:w-1/2 aspect-video">
-            <iframe
-              src="https://www.youtube.com/embed/GeeKXMaHztc?si=Pa1T9VHYnHLjf7Ke"
-              className="w-full h-full"
-              title="Otherlights Trailer"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
-          </div>
-
           <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
             An Action/RPG Roguelite designed
             <br /> for 1 to 4 players in local co-op.
@@ -168,7 +158,7 @@ export default function LandingPage() {
       {/* Explore Section */}
       <section id="explore" className="relative py-20">
         <Image
-          src="/Arbre_Temps.webp"
+          src="/Arbre_Temps2.webp"
           alt="Mystical Time Tree"
           fill
           className="object-cover opacity-60 z-10"
@@ -178,22 +168,26 @@ export default function LandingPage() {
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
         <div className="container mx-auto px-4 relative z-30">
           <h2 className="text-4xl font-bold text-center mb-16 text-yellow-400">
-            Explore a Mystical World
+            A world of fantasy
           </h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
               <p className="text-xl">
-                Explore a dark fantasy univers with an unique art style In this
+                Explore a dark fantasy univers with an unique art style. In this
                 sunless world, nature, monsters and humans Evolved to survive.
+                Let yourself be taken in by the musical and luminous atmosphere.
               </p>
             </div>
-            <Image
-              src="/Arbre_Temps.webp"
-              alt="Mystical Time Tree"
-              width={600}
-              height={400}
-              className="rounded-lg shadow-2xl"
-            />
+            <div className="sm:w-3/4 md:w-1/2 aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/DpXtCg87Fp0?si=ZJFr2I0jVnAxLPez"
+                className="w-full h-full"
+                title="Otherlights OST - Astral Fox"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>
@@ -211,11 +205,11 @@ export default function LandingPage() {
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
         <div className="ccontainer mx-auto px-4 relative z-30">
           <h2 className="text-4xl font-bold text-center mb-16 text-yellow-400">
-            Meet the Characters
+            Fight as a team
           </h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <Image
-              src="/village.webp"
+              src="/groupe_charas.webp"
               alt="Village Scene"
               width={600}
               height={400}
@@ -246,7 +240,7 @@ export default function LandingPage() {
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
         <div className="container mx-auto px-4 relative z-30">
           <h2 className="text-4xl font-bold text-center mb-16 text-yellow-400">
-            Choose Your Destiny
+            Choose your Destiny
           </h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
@@ -256,7 +250,7 @@ export default function LandingPage() {
               </p>
             </div>
             <Image
-              src="/planche_destinees.webp"
+              src="/destinies.webp"
               alt="Character Destinies"
               width={600}
               height={400}
@@ -279,11 +273,11 @@ export default function LandingPage() {
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
         <div className="container mx-auto px-4 relative z-30">
           <h2 className="text-4xl font-bold text-center mb-16 text-yellow-400">
-            Craft Your Legend
+            Create your own build
           </h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <Image
-              src="/Screenshot_Loot.webp"
+              src="/weapons.webp"
               alt="Character Building"
               width={600}
               height={400}
@@ -321,15 +315,42 @@ export default function LandingPage() {
                 challenges, and adventures.
               </p>
             </div>
-            <Image
-              src="/UI-Carte.webp"
-              alt="World Map"
-              width={600}
-              height={400}
-              className="rounded-lg shadow-2xl"
-            />
+            {/* Image cliquable */}
+            <div
+              onClick={() => setIsModalOpen(true)}
+              className="cursor-pointer"
+            >
+              <Image
+                src="/UI-Carte.webp"
+                alt="World Map"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-2xl"
+              />
+            </div>
           </div>
         </div>
+
+        {/* Modal pour l'image agrandie */}
+        {isModalOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+            <div className="relative">
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="absolute top-2 right-2 text-white text-3xl font-bold"
+              >
+                &times;
+              </button>
+              <Image
+                src="/UI-Carte.webp"
+                alt="World Map Enlarged"
+                width={1200}
+                height={800}
+                className="rounded-lg"
+              />
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Footer */}
