@@ -209,7 +209,7 @@ export default function LandingPage() {
           </h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <Image
-              src="/groupe_charas.webp"
+              src="/Groupe_Charas.webp"
               alt="Village Scene"
               width={600}
               height={400}
@@ -250,7 +250,7 @@ export default function LandingPage() {
               </p>
             </div>
             <Image
-              src="/destinies.webp"
+              src="/Destinies.webp"
               alt="Character Destinies"
               width={600}
               height={400}
@@ -277,7 +277,7 @@ export default function LandingPage() {
           </h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <Image
-              src="/weapons.webp"
+              src="/Weapons.webp"
               alt="Character Building"
               width={600}
               height={400}
