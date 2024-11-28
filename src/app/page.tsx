@@ -61,7 +61,7 @@ export default function LandingPage() {
           <div className="w-full flex justify-between items-center py-4">
             <Link
               href="/"
-              className="text-2xl font-bold text-yellow-400 pl-4 flex items-center"
+              className="text-2xl font-bold text-yellow-500 pl-4 flex items-center gap-4"
             >
               <Image
                 src="/library_logo_transparent.webp"
@@ -71,7 +71,7 @@ export default function LandingPage() {
                 className="object-cover"
                 priority
               />
-              <h1 className=" text-yellow-400 ">Otherlights</h1>
+              <h1 className=" text-yellow-500 ">Otherlights</h1>
             </Link>
             <nav className="hidden md:flex space-x-6 pr-4">
               {[
@@ -87,9 +87,9 @@ export default function LandingPage() {
                   onClick={() =>
                     scrollToSection(item.toLowerCase().replace(' ', '-'))
                   }
-                  className={`text-sm font-medium hover:text-yellow-400 transition-colors ${
+                  className={`text-sm font-medium hover:text-yellow-500 transition-colors ${
                     activeSection === item.toLowerCase().replace(' ', '-')
-                      ? 'text-yellow-400'
+                      ? 'text-yellow-500'
                       : 'text-gray-300'
                   }`}
                   aria-label={'scroll to ' + item + ' section'}
@@ -100,7 +100,7 @@ export default function LandingPage() {
               ))}
             </nav>
             <button
-              className="md:hidden text-gray-300 hover:text-yellow-400 transition-colors"
+              className="md:hidden text-gray-300 hover:text-yellow-500 transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
               role="button"
@@ -121,7 +121,7 @@ export default function LandingPage() {
                   onClick={() =>
                     scrollToSection(item.toLowerCase().replace(' ', '-'))
                   }
-                  className="text-xl font-medium text-gray-300 hover:text-yellow-400 transition-colors"
+                  className="text-xl font-medium text-gray-300 hover:text-yellow-500 transition-colors"
                 >
                   {item}
                 </button>
@@ -150,7 +150,7 @@ export default function LandingPage() {
           </p>
           <Link
             href="https://store.steampowered.com/app/2666000/Otherlights/"
-            className="inline-flex items-center px-8 py-3 text-lg font-bold text-black bg-yellow-400 rounded-full hover:bg-yellow-300 transition-colors"
+            className="inline-flex items-center px-8 py-3 text-lg font-bold text-black bg-yellow-500 rounded-full hover:bg-yellow-300 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -172,7 +172,7 @@ export default function LandingPage() {
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-20"></div>
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
         <div className="container mx-auto px-4 relative z-30">
-          <h2 className="text-4xl font-bold text-center mb-16 text-yellow-400">
+          <h2 className="text-4xl font-bold text-center mb-16 text-yellow-500">
             A world of fantasy
           </h2>
           <div className="grid md:grid-cols-2 gap-16 md:gap-32 xl:gap-72 justify-between items-center">
@@ -210,7 +210,7 @@ export default function LandingPage() {
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-20"></div>
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
         <div className="ccontainer mx-auto px-4 relative z-30">
-          <h2 className="text-4xl font-bold text-center mb-16 text-yellow-400">
+          <h2 className="text-4xl font-bold text-center mb-16 text-yellow-500">
             Fight as a team
           </h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -218,7 +218,7 @@ export default function LandingPage() {
               src="/Groupe_Charas.webp"
               alt="Otherlights Characters"
               width={600}
-              height={400}
+              height={500}
               className="rounded-lg shadow-2xl order-2 md:order-1"
             />
 
@@ -245,7 +245,7 @@ export default function LandingPage() {
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-20"></div>
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
         <div className="container mx-auto px-4 relative z-30">
-          <h2 className="text-4xl font-bold text-center mb-16 text-yellow-400">
+          <h2 className="text-4xl font-bold text-center mb-16 text-yellow-500">
             Choose your Destiny
           </h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -259,7 +259,7 @@ export default function LandingPage() {
               src="/Destinies.webp"
               alt="Destiny selection page"
               width={600}
-              height={400}
+              height={500}
               className="rounded-lg shadow-2xl"
             />
           </div>
@@ -272,13 +272,13 @@ export default function LandingPage() {
           src="/Screenshot_Loot.webp"
           alt="Character Building"
           fill
-          className="object-cover opacity-40 z-10"
+          className="object-cover opacity-30 z-10"
           priority
         />
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-20"></div>
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
         <div className="container mx-auto px-4 relative z-30">
-          <h2 className="text-4xl font-bold text-center mb-16 text-yellow-400">
+          <h2 className="text-4xl font-bold text-center mb-16 text-yellow-500">
             Create your own build
           </h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -286,7 +286,7 @@ export default function LandingPage() {
               src="/Weapons.webp"
               alt="Otherlights Weapons"
               width={600}
-              height={400}
+              height={500}
               className="rounded-lg shadow-2xl order-2 md:order-1"
             />
             <div className="space-y-6 order-1 md:order-2">
@@ -313,7 +313,7 @@ export default function LandingPage() {
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-20"></div>
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
         <div className="container mx-auto px-4 relative z-30">
-          <h2 className="text-4xl font-bold text-center mb-16 text-yellow-400">
+          <h2 className="text-4xl font-bold text-center mb-16 text-yellow-500">
             Find Your Way
           </h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -366,7 +366,7 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="py-12 bg-gblack" id="find-us">
         <div className="container mx-auto px-4 text-center flex flex-col gap-4 items-center justify-center">
-          <h2 className="text-4xl font-bold text-center text-yellow-400">
+          <h2 className="text-4xl font-bold text-center text-yellow-500">
             Find us
           </h2>
           <Image
@@ -379,7 +379,7 @@ export default function LandingPage() {
           <div className="flex justify-center flex-wrap gap-4 mb-8">
             <Link
               href="https://www.instagram.com/otherlights_official/"
-              className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
+              className="p-3 bg-yellow-500 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Follow Soleil Artificiel on Instagram (open in a new tab)"
@@ -388,7 +388,7 @@ export default function LandingPage() {
             </Link>
             <Link
               href="https://www.facebook.com/profile.php?id=61568828963619"
-              className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
+              className="p-3 bg-yellow-500 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Follow Soleil Artificiel on Facebook (open in a new tab)"
@@ -397,7 +397,7 @@ export default function LandingPage() {
             </Link>
             <Link
               href="https://x.com/SolArtificiel"
-              className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
+              className="p-3 bg-yellow-500 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Follow Soleil Artificiel on X (open in a new tab)"
@@ -406,7 +406,7 @@ export default function LandingPage() {
             </Link>
             <Link
               href="https://www.tiktok.com/@otherlights_game"
-              className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
+              className="p-3 bg-yellow-500 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Follow Soleil Artificiel on TikTok (open in a new tab)"
@@ -415,7 +415,7 @@ export default function LandingPage() {
             </Link>
             <Link
               href="https://www.youtube.com/@Otherlights"
-              className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
+              className="p-3 bg-yellow-500 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Follow Soleil Artificiel on YouTube (open in a new tab)"
@@ -424,7 +424,7 @@ export default function LandingPage() {
             </Link>
             <Link
               href="https://www.linkedin.com/company/soleil-artificiel/"
-              className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
+              className="p-3 bg-yellow-500 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Follow Soleil Artificiel on LinkedIn (open in a new tab)"
@@ -433,7 +433,7 @@ export default function LandingPage() {
             </Link>
             <Link
               href="https://discord.gg/4kstZMUrAt"
-              className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
+              className="p-3 bg-yellow-500 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Join the Otherlights Discord server (open in a new tab)"
@@ -449,7 +449,7 @@ export default function LandingPage() {
             <Link
               href="https://www.malt.fr/profile/maeldonnart?overview=true"
               target="_blank"
-              className="text-yellow-400 hover:underline"
+              className="text-yellow-500 hover:underline"
               rel="noopener noreferrer"
               aria-label="Hire Mael Donnart on Malt as a freelancer (open in a new tab)"
             >
