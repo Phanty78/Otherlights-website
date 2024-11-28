@@ -65,7 +65,7 @@ export default function LandingPage() {
             >
               <Image
                 src="/library_logo_transparent.webp"
-                alt="Otherlights Hero"
+                alt="Otherlights Logo"
                 width={100}
                 height={100}
                 className="object-cover"
@@ -148,6 +148,7 @@ export default function LandingPage() {
             href="https://store.steampowered.com/app/2666000/Otherlights/"
             className="inline-flex items-center px-8 py-3 text-lg font-bold text-black bg-yellow-400 rounded-full hover:bg-yellow-300 transition-colors"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Play Now
           </Link>
@@ -211,7 +212,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <Image
               src="/Groupe_Charas.webp"
-              alt="Village Scene"
+              alt="Otherlights Characters"
               width={600}
               height={400}
               className="rounded-lg shadow-2xl order-2 md:order-1"
@@ -252,7 +253,7 @@ export default function LandingPage() {
             </div>
             <Image
               src="/Destinies.webp"
-              alt="Character Destinies"
+              alt="Destiny selection page"
               width={600}
               height={400}
               className="rounded-lg shadow-2xl"
@@ -279,7 +280,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <Image
               src="/Weapons.webp"
-              alt="Character Building"
+              alt="Otherlights Weapons"
               width={600}
               height={400}
               className="rounded-lg shadow-2xl order-2 md:order-1"
@@ -300,7 +301,7 @@ export default function LandingPage() {
       <section id="world" className="py-20 relative">
         <Image
           src="/UI-Carte.webp"
-          alt="World Map"
+          alt="World Map in background"
           fill
           className="object-cover opacity-40 z-10"
           priority
@@ -322,10 +323,12 @@ export default function LandingPage() {
             <div
               onClick={() => setIsModalOpen(true)}
               className="cursor-pointer"
+              role="button"
+              aria-label="Click to enlarge the world map"
             >
               <Image
                 src="/UI-Carte.webp"
-                alt="World Map"
+                alt="World Map (click to enlarge)"
                 width={600}
                 height={400}
                 className="rounded-lg shadow-2xl"
@@ -364,7 +367,7 @@ export default function LandingPage() {
           </h2>
           <Image
             src="/logo_entreprise_300.webp"
-            alt="Soleil artificel logo"
+            alt="Soleil artificel studio logo"
             width={300}
             height={200}
             className="rounded-lg shadow-2xl"
@@ -374,6 +377,8 @@ export default function LandingPage() {
               href="https://www.instagram.com/otherlights_official/"
               className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Soleil Artificiel on Instagram (open in a new tab)"
             >
               <FaInstagram className="w-6 h-6" />
             </Link>
@@ -381,6 +386,8 @@ export default function LandingPage() {
               href="https://www.facebook.com/profile.php?id=61568828963619"
               className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Soleil Artificiel on Facebook (open in a new tab)"
             >
               <FaFacebook className="w-6 h-6" />
             </Link>
@@ -388,6 +395,8 @@ export default function LandingPage() {
               href="https://x.com/SolArtificiel"
               className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Soleil Artificiel on X (open in a new tab)"
             >
               <FaTwitter className="w-6 h-6" />
             </Link>
@@ -395,6 +404,8 @@ export default function LandingPage() {
               href="https://www.tiktok.com/@otherlights_game"
               className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Soleil Artificiel on TikTok (open in a new tab)"
             >
               <FaTiktok className="w-6 h-6" />
             </Link>
@@ -402,6 +413,8 @@ export default function LandingPage() {
               href="https://www.youtube.com/@Otherlights"
               className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Soleil Artificiel on YouTube (open in a new tab)"
             >
               <FaYoutube className="w-6 h-6" />
             </Link>
@@ -409,6 +422,8 @@ export default function LandingPage() {
               href="https://www.linkedin.com/company/soleil-artificiel/"
               className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Soleil Artificiel on LinkedIn (open in a new tab)"
             >
               <FaLinkedin className="w-6 h-6" />
             </Link>
@@ -416,6 +431,8 @@ export default function LandingPage() {
               href="https://discord.gg/4kstZMUrAt"
               className="p-3 bg-yellow-400 rounded-lg hover:bg-gray-700 transition-colors"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Join the Otherlights Discord server (open in a new tab)"
             >
               <FaDiscord className="w-6 h-6" />
             </Link>
@@ -429,6 +446,8 @@ export default function LandingPage() {
               href="https://www.malt.fr/profile/maeldonnart?overview=true"
               target="_blank"
               className="text-yellow-400 hover:underline"
+              rel="noopener noreferrer"
+              aria-label="Hire Mael Donnart on Malt as a freelancer (open in a new tab)"
             >
               Malt
             </Link>
