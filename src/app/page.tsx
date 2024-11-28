@@ -54,15 +54,54 @@ export default function LandingPage() {
   return (
     <>
       <Head>
-        <title>Otherlights</title>
+        <html lang="en" />
+        <meta name="robots" content="index,follow" />
+        <title>
+          Otherlights - Action/RPG Roguelite for 1 to 4 Players in Local Co-op
+        </title>
         <meta
           name="description"
-          content="An Action/RPG Roguelite designed for 1 to 4 players in local co-op."
+          content="Otherlights is an Action/RPG Roguelite designed for 1 to 4 players in local co-op. Explore a dark fantasy universe with unique art style and captivating gameplay."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.otherlights.fr/" />
+        <meta
+          property="og:title"
+          content="Otherlights - Action/RPG Roguelite for 1 to 4 Players in Local Co-op"
+        />
+        <meta
+          property="og:description"
+          content="Otherlights is an Action/RPG Roguelite designed for 1 to 4 players in local co-op. Explore a dark fantasy universe with unique art style and captivating gameplay."
+        />
+        <meta
+          property="og:image"
+          content="https://www.otherlights.fr/store_capsule_main2.webp"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.otherlights.fr/" />
+        <meta
+          name="twitter:title"
+          content="Otherlights - Action/RPG Roguelite for 1 to 4 Players in Local Co-op"
+        />
+        <meta
+          name="twitter:description"
+          content="Otherlights is an Action/RPG Roguelite designed for 1 to 4 players in local co-op. Explore a dark fantasy universe with unique art style and captivating gameplay."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.otherlights.fr/store_capsule_main2.webp"
+        />
+
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://www.otherlights.fr/" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
       </Head>
+
       <div className="flex flex-col min-h-screen bg-black text-gray-100">
         <header className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90 shadow-md">
           <div className=" px-4 w-full">
