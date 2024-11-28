@@ -81,7 +81,7 @@ export default function FindUsSection() {
             <FaLinkedin className="w-6 h-6" />
           </Link>
           <Link
-            href="https://discord.gg/4kstZMUrAt"
+            href="https://discord.gg/QyNVWr8p6k"
             className="p-3 bg-yellow-500 rounded-lg hover:bg-gray-700 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
