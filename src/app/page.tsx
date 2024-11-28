@@ -139,7 +139,7 @@ export default function LandingPage() {
           className="object-cover opacity-60"
           priority
         />
-        <div className="relative z-10 container mx-auto px-4 text-center flex flex-col items-center gap-4">
+        <div className="relative z-10 container mx-auto pb-80 xl:pb-96 text-center flex flex-col items-center justify-start gap-4">
           <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
             An Action/RPG Roguelite designed
             <br /> for 1 to 4 players in local co-op.
@@ -170,15 +170,16 @@ export default function LandingPage() {
           <h2 className="text-4xl font-bold text-center mb-16 text-yellow-400">
             A world of fantasy
           </h2>
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid md:grid-cols-2 gap-16 md:gap-32 xl:gap-56 justify-between items-center">
             <div className="space-y-6">
               <p className="text-xl">
                 Explore a dark fantasy univers with an unique art style. In this
                 sunless world, nature, monsters and humans Evolved to survive.
+                <br />
                 Let yourself be taken in by the musical and luminous atmosphere.
               </p>
             </div>
-            <div className="sm:w-3/4 md:w-1/2 aspect-video">
+            <div className="sm:w-full md:w-3/4 aspect-video flex justify-center">
               <iframe
                 src="https://www.youtube.com/embed/DpXtCg87Fp0?si=ZJFr2I0jVnAxLPez"
                 className="w-full h-full"
@@ -217,10 +218,10 @@ export default function LandingPage() {
             />
 
             <div className="space-y-6 order-1 md:order-2">
-              <p className="text-xl">
+              <p className="text-xl text-center md:pt-36">
                 Unlock characters and progress in the roguelite quest completed
-                secondary missions that take place in the past. All playable in
-                local co-op.
+                secondary missions
+                <br /> that take place in the past. All playable in local co-op.
               </p>
             </div>
           </div>
@@ -284,9 +285,11 @@ export default function LandingPage() {
               className="rounded-lg shadow-2xl order-2 md:order-1"
             />
             <div className="space-y-6 order-1 md:order-2">
-              <p className="text-xl">
+              <p className="text-xl text-center">
                 Optimize your build with a large content of item, weapons and
-                play styles
+                play style. Combine spear, staff, heavy weapon, great sword, one
+                handed, dagger and shield for over 20 move set. Find the best in
+                more than 300 weapons.
               </p>
             </div>
           </div>
@@ -355,10 +358,17 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="py-12 bg-gblack" id="find-us">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-center mb-16 text-yellow-400">
+        <div className="container mx-auto px-4 text-center flex flex-col gap-4 items-center justify-center">
+          <h2 className="text-4xl font-bold text-center text-yellow-400">
             Find us
           </h2>
+          <Image
+            src="/logo_entreprise_300.webp"
+            alt="Soleil artificel logo"
+            width={300}
+            height={200}
+            className="rounded-lg shadow-2xl"
+          />
           <div className="flex justify-center flex-wrap gap-4 mb-8">
             <Link
               href="https://www.instagram.com/otherlights_official/"
