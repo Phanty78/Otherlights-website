@@ -171,7 +171,7 @@ export default function LandingPage() {
           <h2 className="text-4xl font-bold text-center mb-16 text-yellow-400">
             A world of fantasy
           </h2>
-          <div className="grid md:grid-cols-2 gap-16 md:gap-32 xl:gap-56 justify-between items-center">
+          <div className="grid md:grid-cols-2 gap-16 md:gap-32 xl:gap-72 justify-between items-center">
             <div className="space-y-6">
               <p className="text-xl">
                 Explore a dark fantasy univers with an unique art style. In this
