@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
+import { Analytics } from '@vercel/analytics/react'
 
 const MorrisRoman = localFont({
   src: './fonts/MorrisRomanBlack.woff2',
@@ -80,6 +81,7 @@ export default function RootLayout({
         className={`${MorrisRoman.variable} ${ParmaPetit.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   )
