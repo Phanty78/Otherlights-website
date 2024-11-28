@@ -1,19 +1,16 @@
 'use client'
 
+import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import {
-  FaDiscord,
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaTiktok,
-  FaTwitter,
-  FaYoutube,
-} from 'react-icons/fa'
 import { HiMenu, HiX } from 'react-icons/hi'
-
+import BuildSection from './components/Build'
+import CharactersSection from './components/Characters'
+import DestiniesSection from './components/Destinies'
+import ExploreSection from './components/Explore'
+import FindUsSection from './components/Footer'
+import HeroSection from './components/Hero'
 export default function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
@@ -55,410 +52,168 @@ export default function LandingPage() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-black text-gray-100">
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90 shadow-md">
-        <div className=" px-4 w-full">
-          <div className="w-full flex justify-between items-center py-4">
-            <Link
-              href="/"
-              className="text-2xl font-bold text-yellow-500 pl-4 flex items-center gap-4"
-            >
-              <Image
-                src="/library_logo_transparent.webp"
-                alt="Otherlights Logo"
-                width={100}
-                height={100}
-                className="object-cover"
-                priority
-              />
-              <h1 className=" text-yellow-500 ">Otherlights</h1>
-            </Link>
-            <nav className="hidden md:flex space-x-6 pr-4">
-              {[
-                'Explore',
-                'Characters',
-                'Destinies',
-                'Build',
-                'World',
-                'Find Us',
-              ].map((item) => (
-                <button
-                  key={item}
-                  onClick={() =>
-                    scrollToSection(item.toLowerCase().replace(' ', '-'))
-                  }
-                  className={`text-sm font-medium hover:text-yellow-500 transition-colors ${
-                    activeSection === item.toLowerCase().replace(' ', '-')
-                      ? 'text-yellow-500'
-                      : 'text-gray-300'
-                  }`}
-                  aria-label={'scroll to ' + item + ' section'}
-                  role="link"
-                >
-                  {item}
-                </button>
-              ))}
-            </nav>
-            <button
-              className="md:hidden text-gray-300 hover:text-yellow-500 transition-colors"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
-              role="button"
-            >
-              {isMenuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
-            </button>
-          </div>
-        </div>
-      </header>
-
-      {isMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-black bg-opacity-90 md:hidden">
-          <div className="flex flex-col items-center justify-center h-full space-y-6">
-            {['Explore', 'Characters', 'Destinies', 'Build', 'Find Us'].map(
-              (item) => (
-                <button
-                  key={item}
-                  onClick={() =>
-                    scrollToSection(item.toLowerCase().replace(' ', '-'))
-                  }
-                  className="text-xl font-medium text-gray-300 hover:text-yellow-500 transition-colors"
-                >
-                  {item}
-                </button>
-              )
-            )}
-          </div>
-        </div>
-      )}
-
-      {/* Hero Section */}
-      <section
-        id="hero"
-        className="relative h-screen flex items-center justify-center overflow-hidden pt-16"
-      >
-        <Image
-          src="/store_capsule_main2.webp"
-          alt="Otherlights Hero"
-          fill
-          className="object-cover opacity-60"
-          priority
+    <>
+      <Head>
+        <title>Otherlights</title>
+        <meta
+          name="description"
+          content="An Action/RPG Roguelite designed for 1 to 4 players in local co-op."
         />
-        <div className="relative z-10 container mx-auto pb-80 xl:pb-96 text-center flex flex-col items-center justify-start gap-4">
-          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-            An Action/RPG Roguelite designed
-            <br /> for 1 to 4 players in local co-op.
-          </p>
-          <Link
-            href="https://store.steampowered.com/app/2666000/Otherlights/"
-            className="inline-flex items-center px-8 py-3 text-lg font-bold text-black bg-yellow-500 rounded-full hover:bg-yellow-300 transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Play Now
-          </Link>
-        </div>
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black"></div>
-      </section>
-
-      {/* Explore Section */}
-      <section id="explore" className="relative py-20">
-        <Image
-          src="/Arbre_Temps2.webp"
-          alt="Mystical Time Tree"
-          fill
-          className="object-cover opacity-60 z-10"
-          priority
-        />
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-20"></div>
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
-        <div className="container mx-auto px-4 relative z-30">
-          <h2 className="text-4xl font-bold text-center mb-16 text-yellow-500">
-            A world of fantasy
-          </h2>
-          <div className="grid md:grid-cols-2 gap-16 md:gap-32 xl:gap-72 justify-between items-center">
-            <div className="space-y-6">
-              <p className="text-xl">
-                Explore a dark fantasy univers with an unique art style. In this
-                sunless world, nature, monsters and humans Evolved to survive.
-                <br />
-                Let yourself be taken in by the musical and luminous atmosphere.
-              </p>
-            </div>
-            <div className="sm:w-full md:w-3/4 aspect-video flex justify-center">
-              <iframe
-                src="https://www.youtube.com/embed/DpXtCg87Fp0?si=ZJFr2I0jVnAxLPez"
-                className="w-full h-full"
-                title="Otherlights OST - Astral Fox"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Characters Section */}
-      <section id="characters" className="relative py-20">
-        <Image
-          src="/village.webp"
-          alt="Village Scene"
-          fill
-          className="object-cover opacity-60 z-10"
-          priority
-        />
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-20"></div>
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
-        <div className="ccontainer mx-auto px-4 relative z-30">
-          <h2 className="text-4xl font-bold text-center mb-16 text-yellow-500">
-            Fight as a team
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <Image
-              src="/Groupe_Charas.webp"
-              alt="Otherlights Characters"
-              width={600}
-              height={500}
-              className="rounded-lg shadow-2xl order-2 md:order-1"
-            />
-
-            <div className="space-y-6 order-1 md:order-2">
-              <p className="text-xl text-center md:pt-36">
-                Unlock characters and progress in the roguelite quest completed
-                secondary missions
-                <br /> that take place in the past. All playable in local co-op.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Destinies Section */}
-      <section id="destinies" className="relative py-20">
-        <Image
-          src="/planche_destinees.webp"
-          alt="Character Destinies"
-          fill
-          className="object-cover opacity-60 z-10"
-          priority
-        />
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-20"></div>
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
-        <div className="container mx-auto px-4 relative z-30">
-          <h2 className="text-4xl font-bold text-center mb-16 text-yellow-500">
-            Choose your Destiny
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="space-y-6">
-              <p className="text-xl">
-                Choose upon more than 50 characters and 46 destinies that which
-                brings you powerful passives skills
-              </p>
-            </div>
-            <Image
-              src="/Destinies.webp"
-              alt="Destiny selection page"
-              width={600}
-              height={500}
-              className="rounded-lg shadow-2xl"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Build Section */}
-      <section id="build" className="relative py-20">
-        <Image
-          src="/Screenshot_Loot.webp"
-          alt="Character Building"
-          fill
-          className="object-cover opacity-30 z-10"
-          priority
-        />
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-20"></div>
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
-        <div className="container mx-auto px-4 relative z-30">
-          <h2 className="text-4xl font-bold text-center mb-16 text-yellow-500">
-            Create your own build
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <Image
-              src="/Weapons.webp"
-              alt="Otherlights Weapons"
-              width={600}
-              height={500}
-              className="rounded-lg shadow-2xl order-2 md:order-1"
-            />
-            <div className="space-y-6 order-1 md:order-2">
-              <p className="text-xl text-center">
-                Optimize your build with a large content of item, weapons and
-                play style. Combine spear, staff, heavy weapon, great sword, one
-                handed, dagger and shield for over 20 move set. Find the best in
-                more than 300 weapons.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* World Section */}
-      <section id="world" className="py-20 relative">
-        <Image
-          src="/UI-Carte.webp"
-          alt="World Map in background"
-          fill
-          className="object-cover opacity-40 z-10"
-          priority
-        />
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-20"></div>
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
-        <div className="container mx-auto px-4 relative z-30">
-          <h2 className="text-4xl font-bold text-center mb-16 text-yellow-500">
-            Find Your Way
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="space-y-6">
-              <p className="text-xl">
-                Explore a vast and interconnected world filled with secrets,
-                challenges, and adventures.
-              </p>
-            </div>
-            {/* Image cliquable */}
-            <div
-              onClick={() => setIsModalOpen(true)}
-              className="cursor-pointer"
-              role="button"
-              aria-label="Click to enlarge the world map"
-            >
-              <Image
-                src="/UI-Carte.webp"
-                alt="World Map (click to enlarge)"
-                width={600}
-                height={400}
-                className="rounded-lg shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Modal pour l'image agrandie */}
-        {isModalOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-            <div className="relative">
-              <button
-                onClick={() => setIsModalOpen(false)}
-                className="absolute top-2 right-2 text-white text-3xl font-bold"
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+      </Head>
+      <div className="flex flex-col min-h-screen bg-black text-gray-100">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90 shadow-md">
+          <div className=" px-4 w-full">
+            <div className="w-full flex justify-between items-center py-4">
+              <Link
+                href="/"
+                className="text-2xl font-bold text-yellow-500 pl-4 flex items-center gap-4"
               >
-                &times;
+                <Image
+                  src="/library_logo_transparent.webp"
+                  alt="Otherlights Logo"
+                  width={100}
+                  height={100}
+                  className="object-cover"
+                  priority
+                />
+                <h1 className=" text-yellow-500 ">Otherlights</h1>
+              </Link>
+              <nav className="hidden md:flex space-x-6 pr-4">
+                {[
+                  'Explore',
+                  'Characters',
+                  'Destinies',
+                  'Build',
+                  'World',
+                  'Find Us',
+                ].map((item) => (
+                  <button
+                    key={item}
+                    onClick={() =>
+                      scrollToSection(item.toLowerCase().replace(' ', '-'))
+                    }
+                    className={`text-sm font-medium hover:text-yellow-500 transition-colors ${
+                      activeSection === item.toLowerCase().replace(' ', '-')
+                        ? 'text-yellow-500'
+                        : 'text-gray-300'
+                    }`}
+                    aria-label={'scroll to ' + item + ' section'}
+                    role="link"
+                  >
+                    {item}
+                  </button>
+                ))}
+              </nav>
+              <button
+                className="md:hidden text-gray-300 hover:text-yellow-500 transition-colors"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label="Toggle menu"
+                role="button"
+              >
+                {isMenuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
               </button>
-              <Image
-                src="/UI-Carte.webp"
-                alt="World Map Enlarged"
-                width={1200}
-                height={800}
-                className="rounded-lg"
-              />
+            </div>
+          </div>
+        </header>
+
+        {isMenuOpen && (
+          <div className="fixed inset-0 z-40 bg-black bg-opacity-90 md:hidden">
+            <div className="flex flex-col items-center justify-center h-full space-y-6">
+              {['Explore', 'Characters', 'Destinies', 'Build', 'Find Us'].map(
+                (item) => (
+                  <button
+                    key={item}
+                    onClick={() =>
+                      scrollToSection(item.toLowerCase().replace(' ', '-'))
+                    }
+                    className="text-xl font-medium text-gray-300 hover:text-yellow-500 transition-colors"
+                  >
+                    {item}
+                  </button>
+                )
+              )}
             </div>
           </div>
         )}
-      </section>
 
-      {/* Footer */}
-      <footer className="py-12 bg-gblack" id="find-us">
-        <div className="container mx-auto px-4 text-center flex flex-col gap-4 items-center justify-center">
-          <h2 className="text-4xl font-bold text-center text-yellow-500">
-            Find us
-          </h2>
+        <HeroSection />
+
+        <ExploreSection />
+
+        <CharactersSection />
+
+        <DestiniesSection />
+
+        <BuildSection />
+
+        <section id="world" className="py-20 relative">
           <Image
-            src="/logo_entreprise_300.webp"
-            alt="Soleil artificel studio logo"
-            width={300}
-            height={200}
-            className="rounded-lg shadow-2xl"
+            src="/UI-Carte.webp"
+            alt="World Map in background"
+            fill
+            className="object-cover opacity-40 z-10"
+            loading="lazy"
           />
-          <div className="flex justify-center flex-wrap gap-4 mb-8">
-            <Link
-              href="https://www.instagram.com/otherlights_official/"
-              className="p-3 bg-yellow-500 rounded-lg hover:bg-gray-700 transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Follow Soleil Artificiel on Instagram (open in a new tab)"
-            >
-              <FaInstagram className="w-6 h-6" />
-            </Link>
-            <Link
-              href="https://www.facebook.com/profile.php?id=61568828963619"
-              className="p-3 bg-yellow-500 rounded-lg hover:bg-gray-700 transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Follow Soleil Artificiel on Facebook (open in a new tab)"
-            >
-              <FaFacebook className="w-6 h-6" />
-            </Link>
-            <Link
-              href="https://x.com/SolArtificiel"
-              className="p-3 bg-yellow-500 rounded-lg hover:bg-gray-700 transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Follow Soleil Artificiel on X (open in a new tab)"
-            >
-              <FaTwitter className="w-6 h-6" />
-            </Link>
-            <Link
-              href="https://www.tiktok.com/@otherlights_game"
-              className="p-3 bg-yellow-500 rounded-lg hover:bg-gray-700 transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Follow Soleil Artificiel on TikTok (open in a new tab)"
-            >
-              <FaTiktok className="w-6 h-6" />
-            </Link>
-            <Link
-              href="https://www.youtube.com/@Otherlights"
-              className="p-3 bg-yellow-500 rounded-lg hover:bg-gray-700 transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Follow Soleil Artificiel on YouTube (open in a new tab)"
-            >
-              <FaYoutube className="w-6 h-6" />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/company/soleil-artificiel/"
-              className="p-3 bg-yellow-500 rounded-lg hover:bg-gray-700 transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Follow Soleil Artificiel on LinkedIn (open in a new tab)"
-            >
-              <FaLinkedin className="w-6 h-6" />
-            </Link>
-            <Link
-              href="https://discord.gg/4kstZMUrAt"
-              className="p-3 bg-yellow-500 rounded-lg hover:bg-gray-700 transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Join the Otherlights Discord server (open in a new tab)"
-            >
-              <FaDiscord className="w-6 h-6" />
-            </Link>
+          <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-20"></div>
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
+          <div className="container mx-auto px-4 relative z-30">
+            <h2 className="text-4xl font-bold text-center mb-16 text-yellow-500">
+              Find Your Way
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="space-y-6">
+                <p className="text-xl">
+                  Explore a vast and interconnected world filled with secrets,
+                  challenges, and adventures.
+                </p>
+              </div>
+              {/* Image cliquable */}
+              <div
+                onClick={() => setIsModalOpen(true)}
+                className="cursor-pointer"
+                role="button"
+                aria-label="Click to enlarge the world map"
+              >
+                <Image
+                  src="/UI-Carte.webp"
+                  alt="World Map (click to enlarge)"
+                  width={600}
+                  height={400}
+                  className="rounded-lg shadow-2xl"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
-          <p className="text-gray-400">
-            © 2024 Otherlights. All rights reserved.
-          </p>
-          <p className="text-gray-400">
-            Website by Maël Donnart, hire me on{' '}
-            <Link
-              href="https://www.malt.fr/profile/maeldonnart?overview=true"
-              target="_blank"
-              className="text-yellow-500 hover:underline"
-              rel="noopener noreferrer"
-              aria-label="Hire Mael Donnart on Malt as a freelancer (open in a new tab)"
-            >
-              Malt
-            </Link>
-            .
-          </p>
-        </div>
-      </footer>
-    </div>
+
+          {/* Modal pour l'image agrandie */}
+          {isModalOpen && (
+            <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+              <div className="relative">
+                <button
+                  onClick={() => setIsModalOpen(false)}
+                  className="absolute top-2 right-2 text-white text-3xl font-bold"
+                >
+                  &times;
+                </button>
+                <Image
+                  src="/UI-Carte.webp"
+                  alt="World Map Enlarged"
+                  width={1200}
+                  height={800}
+                  className="rounded-lg"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          )}
+        </section>
+
+        <FindUsSection />
+      </div>
+    </>
   )
 }
