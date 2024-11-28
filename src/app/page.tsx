@@ -92,6 +92,8 @@ export default function LandingPage() {
                       ? 'text-yellow-400'
                       : 'text-gray-300'
                   }`}
+                  aria-label={'scroll to ' + item + ' section'}
+                  role="link"
                 >
                   {item}
                 </button>
