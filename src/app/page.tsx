@@ -100,6 +100,8 @@ export default function LandingPage() {
             <button
               className="md:hidden text-gray-300 hover:text-yellow-400 transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+              role="button"
             >
               {isMenuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
             </button>
