@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --morris-roman: var(--font-morris-roman);
+  --parma-petit: var(--font-parma-petit);
 }
 
 @media (prefers-color-scheme: dark) {

@@ -13,7 +13,7 @@ export default function BuildSection() {
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-20"></div>
       <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
       <div className="container mx-auto px-4 relative z-30">
-        <h2 className="text-4xl font-bold text-center mb-16 text-yellow-500">
+        <h2 className="text-4xl font-bold text-center mb-16 text-yellow-500 font-parma-petit">
           Create your own build
         </h2>
         <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -26,7 +26,7 @@ export default function BuildSection() {
             loading="lazy"
           />
           <div className="space-y-6 order-1 md:order-2">
-            <p className="text-xl text-center">
+            <p className="text-3xl text-center font-parma-petit">
               Optimize your build with a large content of item, weapons and play
               style. Combine spear, staff, heavy weapon, great sword, one
               handed, dagger and shield for over 20 move set. Find the best in

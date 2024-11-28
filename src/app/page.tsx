@@ -118,7 +118,9 @@ export default function LandingPage() {
                   className="object-cover"
                   priority
                 />
-                <h1 className=" text-yellow-500 ">Otherlights</h1>
+                <h1 className=" text-yellow-500 font-morris-roman text-3xl">
+                  Otherlights
+                </h1>
               </Link>
               <nav className="hidden md:flex space-x-6 pr-4">
                 {[
@@ -134,7 +136,7 @@ export default function LandingPage() {
                     onClick={() =>
                       scrollToSection(item.toLowerCase().replace(' ', '-'))
                     }
-                    className={`text-sm font-medium hover:text-yellow-500 transition-colors ${
+                    className={`text-2xl font-medium hover:text-yellow-500 transition-colors font-parma-petit ${
                       activeSection === item.toLowerCase().replace(' ', '-')
                         ? 'text-yellow-500'
                         : 'text-gray-300'
@@ -199,12 +201,12 @@ export default function LandingPage() {
           <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-20"></div>
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black z-20"></div>
           <div className="container mx-auto px-4 relative z-30">
-            <h2 className="text-4xl font-bold text-center mb-16 text-yellow-500">
+            <h2 className="text-4xl font-bold text-center mb-16 text-yellow-500 font-parma-petit">
               Find Your Way
             </h2>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-6">
-                <p className="text-xl">
+                <p className="text-3xl font-parma-petit">
                   Explore a vast and interconnected world filled with secrets,
                   challenges, and adventures.
                 </p>

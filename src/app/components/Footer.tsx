@@ -14,7 +14,7 @@ export default function FindUsSection() {
   return (
     <footer className="py-12 bg-gblack" id="find-us">
       <div className="container mx-auto px-4 text-center flex flex-col gap-4 items-center justify-center">
-        <h2 className="text-4xl font-bold text-center text-yellow-500">
+        <h2 className="text-4xl font-bold text-center text-yellow-500 font-parma-petit">
           Find us
         </h2>
         <Image
