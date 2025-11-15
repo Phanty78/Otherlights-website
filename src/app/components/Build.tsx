@@ -4,10 +4,10 @@ export default function BuildSection() {
   return (
     <section id="build" className="relative py-20">
       <Image
-        src="/Screenshot_Loot.webp"
+        src="/ScreenNew2.png"
         alt="Character Building"
         fill
-        className="object-cover opacity-30 z-10"
+        className="object-top object-cover opacity-30 z-10"
         loading="lazy"
       />
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent z-20"></div>

@@ -24,7 +24,7 @@ export default function DestiniesSection() {
             </p>
           </div>
           <Image
-            src="/Destinies.webp"
+            src="/ScreenNewUI.png"
             alt="Destiny selection page"
             width={600}
             height={500}

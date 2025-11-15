@@ -8,7 +8,7 @@ export default function HeroSection() {
       className="relative h-screen flex items-center justify-center overflow-hidden pt-16"
     >
       <Image
-        src="/store_capsule_main2.webp"
+        src="/Header_Site.jpg"
         alt="Otherlights Hero"
         fill
         className="object-cover opacity-60"
