@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Otherlights — official website
 
-## Getting Started
+Source of the official website for **Otherlights**, an action/RPG roguelite
+designed for 1 to 4 players in local co-op.
 
-First, run the development server:
+**Live site:** <https://www.otherlights.fr/>
+
+![Otherlights hero section](docs/hero.jpg)
+
+## Sections
+
+The single-page site is split into components under `src/app/components/`:
+
+- `Hero` — title, trailer link and call to action
+- `Explore`, `Characters`, `Destinies`, `Build`, `World` — game presentation
+- `Find Us` — store and social links
+- `Footer`
+
+## Stack
+
+- [Next.js 15](https://nextjs.org/) with the App Router
+- React 19 release candidate, TypeScript
+- Tailwind CSS 3
+- Self-hosted fonts (`src/app/fonts/`)
+
+## Run locally
+
+Requires Node.js 20+.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm ci
+npm run dev        # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Production build:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`npm run lint` runs the Next.js ESLint configuration.
 
-## Learn More
+Only `package-lock.json` is used by these commands. `pnpm-lock.yaml` is kept
+from an earlier install and is not the reference lockfile.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The site is deployed on Vercel from the `main` branch.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Assets and license
 
-## Deploy on Vercel
+The **source code** is released under the [MIT license](LICENSE).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Game artwork, logos, screenshots, the store capsule and the bundled fonts are
+**excluded from the MIT license** and remain the property of their respective
+owners, all rights reserved. They may not be reused outside this website. See
+[ASSETS.md](ASSETS.md) for the exact scope.
